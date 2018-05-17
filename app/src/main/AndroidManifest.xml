@@ -15,7 +15,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.wanji.jdbluetooth.activity.DeviceSelectActivity"
+            android:name="com.wanji.jdbluetooth.activity.MainActivity"
             android:label="选择设备" >
         </activity>
         <activity
@@ -71,7 +71,7 @@
             android:label="激光波形"  >
         </activity>
         <activity
-            android:name="com.wanji.jdbluetooth.activity.MainActivity"
+            android:name="com.wanji.jdbluetooth.activity.SearchActivity"
             android:label="连接蓝牙"  >
         </activity>
         <activity

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/JdBlueTooth.iml" filepath="$PROJECT_DIR$/JdBlueTooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/MPChartLib/MPChartLib.iml" filepath="$PROJECT_DIR$/MPChartLib/MPChartLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/navigationviewlibrary/navigationviewlibrary.iml" filepath="$PROJECT_DIR$/navigationviewlibrary/navigationviewlibrary.iml" />
     </modules>
   </component>
 </project>

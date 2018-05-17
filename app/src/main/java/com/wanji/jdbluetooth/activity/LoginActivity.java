@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
         // TODO Auto-generated method stub
         switch (arg0.getId()) {
             case R.id.login:  //登陆
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                Intent i = new Intent(LoginActivity.this, SearchActivity.class);
                 startActivity(i);
                 this.finish();
                 break;
