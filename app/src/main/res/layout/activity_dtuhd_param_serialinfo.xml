@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="串口信息"
+        android:textSize="20dip"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorWhite"/>-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="波特率"
+                android:gravity="center_vertical"
+                android:textSize="20dip"/>
+
+            <Spinner
+                android:id="@+id/BaudRate_activity_hddtu_param_netinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dip"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="调试信息"
+                android:gravity="center_vertical"
+                android:textSize="20dip"/>
+
+            <Spinner
+                android:id="@+id/Debug_activity_hddtu_param_systeminfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dip"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="启用RDP协议"
+                android:gravity="center_vertical"
+                android:textSize="20dip"/>
+
+            <Spinner
+                android:id="@+id/RdpType_activity_hddtu_param_systeminfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dip"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="启用Rdp下行协议"
+                android:textSize="20dip"
+                android:gravity="center_vertical"/>
+
+            <Spinner
+                android:id="@+id/RdpDownType_activity_hddtu_param_systeminfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dip"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dip">
+
+        <Button
+            android:id="@+id/getsysteminfo_activity_dtuhd_param_systeminfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_blue"
+            android:text="查询"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setsysteminfo_activity_dtuhd_param_systeminfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_green"
+            android:text="设置"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

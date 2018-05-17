@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">一类交调</string>
+    <string name="systeminfo_activity_hddtu_menu">系统信息</string>
+    <string name="netinfo_activity_hddtu_menu">移动服务</string>
+    <string name="serialinfo_activity_hddtu_menu">串口配置</string>
+    <string name="channelinfo_activity_hddtu_menu">通道配置</string>
+    <string name="serverinfo_activity_hddtu_menu">宏电管理平台</string>
+
+    <string name="serialNo_activity_hddtu_menu">序列号：</string>
+    <string name="hardwarever_activity_hddtu_menu">硬件版本：</string>
+    <string name="id_activity_hddtu_menu">身份识别码：</string>
+    <string name="connectdtu_activity_hddtu_menu">登录DTU</string>
+    <string name="resetdtu_activity_hddtu_menu">重启DTU</string>
+
+    <string name="unknown">未知</string>
+
+    <string name="paramgroup_activity_hddtu_menu">参数分组</string>
+</resources>

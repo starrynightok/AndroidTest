@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbarSize="5dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dip">
+
+            <Button
+                android:id="@+id/GetChannelInfo_activity_dtuhd_param_channelinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_blue"
+                android:text="查询"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/SetChannelInfo_activity_dtuhd_param_channelinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_green"
+                android:text="设置"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通道1"
+                android:textSize="20dip"
+                android:background="@drawable/shape_rectangle"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:stretchColumns="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="通讯方式1"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <Spinner
+                        android:id="@+id/ConnType1_activity_hddtu_param_netinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标IP地址1"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <EditText
+                        android:id="@+id/DscIp1_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标端口1"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DscPort1_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标域名1"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DomainName1_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="注册包1"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/RegisterPack1_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="心跳包1"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/HeartPack1_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通道2"
+                android:textSize="20dip"
+                android:background="@drawable/shape_rectangle"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="通讯方式2"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <Spinner
+                        android:id="@+id/ConnType2_activity_hddtu_param_netinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标IP地址2"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <EditText
+                        android:id="@+id/DscIp2_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标端口2"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DscPort2_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标域名2"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DomainName2_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="注册包2"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/RegisterPack2_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="心跳包2"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/HeartPack2_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通道3"
+                android:textSize="20dip"
+                android:background="@drawable/shape_rectangle"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="通讯方式3"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <Spinner
+                        android:id="@+id/ConnType3_activity_hddtu_param_netinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标IP地址3"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <EditText
+                        android:id="@+id/DscIp3_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标端口3"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DscPort3_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标域名3"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DomainName3_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="注册包3"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/RegisterPack3_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="心跳包3"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/HeartPack3_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通道4"
+                android:textSize="20dip"
+                android:background="@drawable/shape_rectangle"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhite"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="通讯方式4"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <Spinner
+                        android:id="@+id/ConnType4_activity_hddtu_param_netinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标IP地址4"
+                        android:gravity="center_vertical"
+                        android:textSize="20dip"/>
+
+                    <EditText
+                        android:id="@+id/DscIp4_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标端口4"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DscPort4_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="目标域名4"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/DomainName4_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="注册包4"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/RegisterPack4_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="心跳包4"
+                        android:textSize="20dip"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:id="@+id/HeartPack4_activity_hddtu_param_systeminfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_selector"
+                        android:layout_margin="5dip"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

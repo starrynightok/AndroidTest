@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="目标激光器"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光器IP"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/laserIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:digits="0123456789."
+                    android:padding="5dip"
+                    android:text="192.168.0.2"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光器端口"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/laserPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:text="2110"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="laser_state_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="程序版本"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/laserVersionId"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="计时前端状态"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/countTimeState"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="加热启动状态"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/heatState"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光发射状态"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/laserLaunchState"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="电机启动状态"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/emState"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="APD温度(℃)"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/apdTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="电机温度(℃)"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/emTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="APD高压"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/apdHighPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="气压（Kpa）"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/airPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="零点脉宽"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/zeroPlusWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="湿度(%)"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

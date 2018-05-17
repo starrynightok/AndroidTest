@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <Button
+            android:id="@+id/dev_select_btn_config_controller"
+            android:layout_width="250dip"
+            android:layout_height="80dip"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/button_config_controller"
+            android:background="@drawable/shape_blue"
+            android:text="交调控制器配置"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:onClick="dev_select_control"
+            />
+
+        <Button
+            android:id="@+id/dev_select_btn_config_dtu_hd"
+            android:layout_width="250dip"
+            android:layout_height="80dip"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/button_config_dtu"
+            android:background="@drawable/shape_blue"
+            android:text="宏电DTU配置"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:onClick="dev_select_control"
+            />
+
+        <Button
+            android:id="@+id/dev_select_btn_config_dtu_cm"
+            android:layout_width="250dip"
+            android:layout_height="80dip"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/button_config_dtu"
+            android:background="@drawable/shape_blue"
+            android:text="才茂DTU配置"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:onClick="dev_select_control"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

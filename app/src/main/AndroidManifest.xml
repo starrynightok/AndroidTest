@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wanji.jdbluetooth">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.wanji.jdbluetooth.activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.DeviceSelectActivity"
+            android:label="选择设备" >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.MenuControllerActivity"
+            android:label="控制器操作菜单"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.ControlParamsActivity"
+            android:label="控制器参数"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.NetParamsActivity"
+            android:label="网络参数"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.RestartInfoActivity"
+            android:label="重启信息"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.Package01Activity"
+            android:label="01包查询"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.ExParamActivity"
+            android:label="异常参数"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.ThresholdParamActivity"
+            android:label="阈值参数"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.FunctionParamActivity"
+            android:label="功能参数"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.NowVehActivity"
+            android:label="现场出车"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.LaserStateActivity"
+            android:label="激光状态"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.LaserSysActivity"
+            android:label="激光系统"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.LaserHeartActivity"
+            android:label="激光心跳"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.LaserWaveActivity"
+            android:label="激光波形"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.MainActivity"
+            android:label="连接蓝牙"  >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.MenuHDDtuActivity"
+            android:label="宏电DTU操作菜单" >
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.HdDtuParamSystemInfoActivity"
+            android:label="DTU系统信息">
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.HdDtuParamNetInfoActivity"
+            android:label="DTU移动服务">
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.HdDtuParamSerialInfoActivity"
+            android:label="DTU串口信息">
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.HdDtuParamChannelInfoActivity"
+            android:label="DTU通道信息">
+        </activity>
+        <activity
+            android:name="com.wanji.jdbluetooth.activity.HdDtuParamServerInfoActivity"
+            android:label="DTU管理平台">
+        </activity>
+    </application>
+    <!--允许应用程序改变网络状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <!--允许应用程序改变WIFI连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!--允许应用程序访问有关的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!--允许应用程序访问WIFI网卡的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!--允许应用程序完全使用网络-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+</manifest>

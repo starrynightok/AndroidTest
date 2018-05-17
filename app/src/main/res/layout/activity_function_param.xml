@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="控制器时间"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="控制器时间"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/controlTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="controlTime_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="controlTime_set"
+                android:text="校时"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="组包方式"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="组包方式"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/makePackageType"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="makePackageType_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="makePackageType_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="串口波特率"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="串口1波特率"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/com1Baud"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="串口2波特率"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/com2Baud"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="baud_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="baud_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="串口发数"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="双串口发数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/comSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="远程响应端口"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/comRep"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="com_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="com_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="站点信息"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备识别码"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/devId"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="站点编号"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/stationId"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="devInfo_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="devInfo_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="上传参数"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="上传参数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/uploadType"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="uploadType_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="uploadType_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检定单车"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检定单车"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/singleVehSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="singleVehSwitch_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="singleVehSwitch_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="DTU信息"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="DTU协议"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/dtuProc"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="主动中心个数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/zdCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="被动中心个数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/bdCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="dtu_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="dtu_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="车型转换准则"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="摩托车准则"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/mtcRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="三轮车准则"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/slcRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="行人准则"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/xrRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="集装箱准则"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/jzxRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="拖拉机准则"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/tljRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="中小货开关"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/zxhSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="rule_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="rule_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="ADC电压"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="ADC电压"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/adcV"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="adc_query"
+                android:text="查询"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="adc_set"
+                android:text="设置"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

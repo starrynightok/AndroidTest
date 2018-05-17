@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="最近01包时间"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/lastPackage01Time"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="最近01包序号"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/lastPackage01No"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="当前包序号"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/currentPackageNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="02包交互结果"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/package02Result"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="01包交互结果"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/package01Result"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_green"
+            android:layout_margin="5dip"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:onClick="package01_query"
+            android:text="查询" />
+    </LinearLayout>
+</LinearLayout>

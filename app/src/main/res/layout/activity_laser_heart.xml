@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="目标激光器"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光器IP"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/mLaserIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:digits="0123456789."
+                    android:padding="5dip"
+                    android:text="192.168.0.2"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光器端口"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/mLaserPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:text="2110"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="laser_heart_query"
+                android:text="查询心跳"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="laser_heart_set"
+                android:text="设置心跳"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="laser_reset_query"
+                android:text="查询复位"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="laser_reset_clear"
+                android:text="复位清零"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="心跳参数"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="激光器心跳"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#3F51B5" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="复位参数"
+                    android:textColor="#3F51B5"
+                    android:textSize="12dip" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="软件复位次数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/softResetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="独立狗复位次数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/independentResetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="窗口狗复位次数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/windowResetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="上/掉电复位次数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/powerResetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="NRST复位次数"
+                    android:paddingLeft="5dip"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/nrstResetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

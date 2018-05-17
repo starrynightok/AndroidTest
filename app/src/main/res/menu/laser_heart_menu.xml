@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/laser_heart_query_item"
+        android:title="查询心跳" />
+    <item
+        android:id="@+id/laser_heart_set_item"
+        android:title="设置心跳" />
+    <item
+        android:id="@+id/laser_reset_query_item"
+        android:title="查询复位" />
+    <item
+        android:id="@+id/laser_reset_clear_item"
+        android:title="复位清零" />
+</menu>

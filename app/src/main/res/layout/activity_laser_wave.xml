@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <com.github.mikephil.charting.charts.ScatterChart
+                    android:id="@+id/ScatterChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dip"
+                    android:layout_centerInParent="true"
+                    android:layout_span="2" />
+            </TableRow>
+            <!--
+                        <TableRow>
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/lineChart_zj"
+                                android:layout_width="match_parent"
+                                android:layout_height="240dip"
+                                android:layout_span="2"
+                                android:layout_centerInParent="true" />
+                        </TableRow>
+            -->
+            <TableRow>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart_ji"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dip"
+                    android:layout_centerInParent="true"
+                    android:layout_span="2" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="安装方式"
+                    android:textSize="15dip" />
+
+                <Spinner
+                    android:id="@+id/laserInstallType"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="中心点"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/centerPos"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:inputType="number"
+                    android:padding="5dip"
+                    android:text="180"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="标准差"
+                    android:textSize="15dip" />
+
+                <EditText
+                    android:id="@+id/standardDeviation"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_edittext_selector"
+                    android:enabled="false"
+                    android:padding="5dip"
+                    android:textColorHint="#AAAAAA" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_green"
+                android:onClick="laser_wave_vertical"
+                android:text="垂直波形"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue"
+                android:onClick="laser_wave_tilt"
+                android:text="倾斜波形"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape"
+                android:onClick="center_set"
+                android:text="设置中心"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_red"
+                android:onClick="center_auto"
+                android:text="自动中心"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

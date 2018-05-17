@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/laser_wave_vertical_item"
+        android:title="垂直波形" />
+    <item
+        android:id="@+id/laser_wave_tilt_item"
+        android:title="倾斜波形" />
+    <item
+        android:id="@+id/center_set_item"
+        android:title="设置中心" />
+    <item
+        android:id="@+id/center_auto_item"
+        android:title="自动中心" />
+</menu>
