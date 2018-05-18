@@ -9,4 +9,7 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGray">#A2A2A2</color>
     <color name="colorPurple">#933AA3</color>
+    <color name="colorFrenchGrey">#C8C8C8</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#339EFE</color>
 </resources>
